@@ -5,7 +5,6 @@ import (
 	"flag"
 	"fmt"
 	"strings"
-
 )
 
 //go:embed input.txt
@@ -35,7 +34,46 @@ func main() {
 	}
 }
 
+type prefix int
+
+type command struct{
+
+}
+
+func parseCommand(line string){
+
+}
+
+func turnOn(grid [][]bool, fromX int, fromY int, toX int, toY int){
+	for i := fromX; i < toX; i++{
+		for j := fromY; j <= toY; j++{
+			grid[i][j] = true
+		}
+	}
+	return
+}
+
 func part1(input string) int {
+	grid := make([][]bool, 1000)
+	for i := range grid {
+		grid[i] = make([]bool,1000)
+	}
+
+	for _,command := range strings.Split(input, "/n") {
+		switch{
+		case strings.HasPrefix(command, "turn on"):
+
+			
+		case strings.HasPrefix(command, "toggle"):
+
+			
+		case strings.HasPrefix(command, "turn off"):
+
+			
+		default:
+			
+		}
+	}
 
 
 	return 0

@@ -1,3 +1,4 @@
+// Skeleton from https://github.com/alexchao26/advent-of-code-go/blob/main/scripts/skeleton/tmpls/main_test.go
 package main
 
 import (
@@ -13,15 +14,15 @@ func Test_part1(t *testing.T) {
 		want  int
 	}{
 		{
-			name:  "example",
-			input: example,
-			want:  0,
+			name:  "test 1",
+			input: "abcdef",
+			want:  609043,
 		},
-		// {
-		// 	name:  "actual",
-		// 	input: input,
-		// 	want:  0,
-		// },
+		{
+			name:  "actual",
+			input: "pqrstuv",
+			want:  1048970,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
